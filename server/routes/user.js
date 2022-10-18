@@ -22,4 +22,27 @@ router.route('/').post((req, res) => {
   });
 });
 
+router.route('/login').post((req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+  User.find()
+    .where('email')
+    .equals(email)
+    .then((users) => {
+      if (users.length > 0) {
+        bcrypt.compare(password, users[0].password, (err, response) => {
+          if (response) {
+            req.session.user = users;
+            res.json(users[0]);
+          } else {
+            res.json({ message: 'No user found' });
+          }
+        });
+      } else {
+        res.json({ message: 'No user found' });
+      }
+    })
+    .catch((err) => res.status(400).json('Error: ' + err));
+});
+
 module.exports = router;
