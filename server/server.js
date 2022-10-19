@@ -2,12 +2,14 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
 
 require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.use(cookieParser());
 app.use(
   cors({
     origin: ['http://localhost:3000'],
@@ -39,8 +41,10 @@ connection.once('open', () => {
 });
 
 const userRouter = require('./routes/user');
+const brickRouter = require('./routes/brick');
 
 app.use('/user', userRouter);
+app.use('/brick', brickRouter);
 
 app.listen(port, () => {
   console.log(`Server runnig on port ${port}`);
