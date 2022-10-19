@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cards {
+  width: 250px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fa7656;
+  margin: 10px;
+}
+
+.details button {
+  padding: 5px 10px;
+  border: none;
+  font-weight: bold;
+  background-color: black;
+  outline: none;
+  color: white;
+}
