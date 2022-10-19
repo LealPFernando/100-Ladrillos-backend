@@ -12,22 +12,21 @@ En la segunda terminal (Server NodeJs)
 -npm i
 -npm start
 
-
-
 Lo que alcance a realizar es principalmente la parte del Server, en donde
 hice las llamadas API.
 Hay en general tres rutas
 1.-brick
-    Que es para cada ladrillo a comprar
+Que es para cada ladrillo a comprar
 2.-user
-    Que es el usario para login
-    correo:lealp.fernando@gmail.com
-    pass:Max123
+Que es el usario para login
+correo:lealp.fernando@gmail.com
+pass:Max123
 
     Tambien para poder registrar de quien es cada ladrillo y su carrito de compras
+
 3.-shoppingCart
-    Es para poder manipular el carrito de compras y en caso de comprar
-    se registran los ladrillos al usuario
+Es para poder manipular el carrito de compras y en caso de comprar
+se registran los ladrillos al usuario
 
 Trate de tambien hacer el front, pero tuve problemas con el tiempo.
 Del front nada mas se muestra el Login y la pagina principal en donde
