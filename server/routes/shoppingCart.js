@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 let User = require('../models/user.model');
 let Brick = require('../models/brick.model');
 
-router.route('/').get((req, res) => {
-  console.log(req.body.user);
+router.route('/').post((req, res) => {
   User.findById(mongoose.Types.ObjectId(req.body.user))
     .then((user) => {
       res.json(user.cart);
