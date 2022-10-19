@@ -3,21 +3,31 @@ Aplicacion de React y server en Node Js
 Para correrlo se necesitan dos terminales y la contraseña del MongoDB
 
 En la primera terminal (Aplicacion React)
+
 -cd app
+
 -npm i
-npm start
+
+-npm start
 
 En la segunda terminal (Server NodeJs)
+
 -cd server
+
 -npm i
+
 -npm start
 
 Lo que alcance a realizar es principalmente la parte del Server, en donde
 hice las llamadas API.
 Hay en general tres rutas
+
 1.-brick
+
     Que es para cada ladrillo a comprar
+
 2.-user
+
     Que es el usario para login
     correo:lealp.fernando@gmail.com
     pass:Max123
@@ -25,6 +35,7 @@ Hay en general tres rutas
     Tambien para poder registrar de quien es cada ladrillo y su carrito de compras
 
 3.-shoppingCart
+
     Es para poder manipular el carrito de compras y en caso de comprar
     se registran los ladrillos al usuario
 
