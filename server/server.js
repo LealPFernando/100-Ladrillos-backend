@@ -42,9 +42,11 @@ connection.once('open', () => {
 
 const userRouter = require('./routes/user');
 const brickRouter = require('./routes/brick');
+const shoppingCartRouter = require('./routes/shoppingCart');
 
 app.use('/user', userRouter);
 app.use('/brick', brickRouter);
+app.use('/shopping-cart', shoppingCartRouter);
 
 app.listen(port, () => {
   console.log(`Server runnig on port ${port}`);
